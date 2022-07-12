@@ -10,9 +10,9 @@
 number = int(input('Введите номер дня недели: '))
 
 def CheckingTheDay(a):
-    if a < 6:
+    if 0 < a < 6:
         print('Нет')
-    elif a < 8:
+    elif 5 < a < 8:
         print('Да')
     else:
         print('Число не является порядковым номером дня недели')
