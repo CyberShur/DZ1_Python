@@ -9,19 +9,23 @@
 - x=-34; y=-30 -> 3
 '''
 
-x = int(input('Введите координату X: '))
-y = int(input('Введите координату Y: '))
+try:
+    x = float(input('Введите координату X: '))
+    y = float(input('Введите координату Y: '))
 
-def CoordinatesQuarter(a, b):
-    if a > 0 and b > 0: 
-        print(f'Координаты {a}; {b} относятся к первой четверти') 
-    elif a < 0 and b > 0: 
-        print(f'Координаты {a}; {b} относятся к второй четверти') 
-    elif a < 0 and b < 0: 
-        print(f'Координаты {a}; {b} относятся к третьей четверти') 
-    elif a > 0 and b < 0: 
-        print(f'Координаты {a}; {b} относятся к четвёртой четверти') 
-    else: 
-        print('введены нулевые значения')
+    def CoordinatesQuarter(a, b):
+        if a > 0 and b > 0: 
+            print(f'Координаты {a}; {b} относятся к первой четверти') 
+        elif a < 0 and b > 0: 
+            print(f'Координаты {a}; {b} относятся к второй четверти') 
+        elif a < 0 and b < 0: 
+            print(f'Координаты {a}; {b} относятся к третьей четверти') 
+        elif a > 0 and b < 0: 
+            print(f'Координаты {a}; {b} относятся к четвёртой четверти') 
+        else: 
+            print('Введены нулевые значения')
 
-CoordinatesQuarter(x, y)
+    CoordinatesQuarter(x, y)
+
+except ValueError:
+    print("Координаты должны содержать только числа!")
